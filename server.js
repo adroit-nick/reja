@@ -15,6 +15,11 @@ app.set("view engine", "ejs");
 
 
 // 4  routing code
+app.post("/create-item", (req, res) => {
+    console/log(req.body);
+    res.json({test:"qabul qilindi"});
+})
+
 app.get("/", function (req, res) {
     res.render("harid");
 
