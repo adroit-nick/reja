@@ -16,25 +16,24 @@ app.set("view engine", "ejs");
 
 // 4  routing code
 app.post("/create-item", (req, res) => {
-    console/log(req.body);
-    res.json({test:"qabul qilindi"});
+    console.log(req.body);
+    res.json({test:"successfully"});
 })
 
 app.get("/", function (req, res) {
     res.render("harid");
-
 });
 
 
-app.get("/hello", function(req, res) {  
-    res.end("<h1>Hello World by me</h1>");
-});
-app.get("/list", function(req, res) {  
-    res.end("banan, olcha, olma");
-});
-app.get("/", function(req, res)   {
-     res.render('comment yaratish eski.ejs');
- });
+// app.get("/hello", function(req, res) {  
+//     res.end("<h1>Hello World by me</h1>");
+// });
+// app.get("/list", function(req, res) {  
+//     res.end("banan, olcha, olma");
+// });
+// app.get("/", function(req, res)   {
+//      res.render('harid.ejs');
+//  });
 
 
 const server = http.createServer(app);
