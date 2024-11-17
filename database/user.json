@@ -1,7 +1,7 @@
 {
-    "name": "Steve",
-    "professor": "Software Engineer",
-    "age": 20,
+    "name": "Nick",
+    "profession": "Software Engineer and Neurologists",
+    "age": 30,
     "residence": "S.Korea",
     "address": "S.Korea, Busan",
     "languages": ["Uzbek", "Korean", "English"],
