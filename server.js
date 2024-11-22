@@ -21,7 +21,6 @@ app.use(express.urlencoded({extended: true}));
 
 
 // 2 Session ga bogliq kodlar
-
 // 3 views ga bogliq codelar
 app.set("views", "views");
 app.set("view engine", "ejs");
@@ -42,14 +41,17 @@ app.get('/author', (req, res) =>{
 
 
 app.get("/", function(req, res){
-  res.render("harid");
+  res.render("Reja");
 });
 
 
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT , function () {
-  console.log(`The server is running sucsessfully on port: ${PORT}`);
+  console.log(
+    `The server is running sucsessfully on port: ${PORT}, http://localhost:${PORT}`
+
+  );
 
 });
 
@@ -60,6 +62,6 @@ server.listen(PORT , function () {
 //     res.end("banan, olcha, olma");
 // });
 // app.get("/", function(req, res)   {
-//      res.render('harid.ejs');
+//      res.render('Reja.ejs');
 //  });
 
