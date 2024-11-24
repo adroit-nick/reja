@@ -3,7 +3,7 @@ const mongodb = require("mongodb");
 
 // MongoDB ulanish satri
 const connectionString =
-  "mongodb+srv://Edward_MIT:2C1XwA84vUsgTJPC@cluster0.kyw1m.mongodb.net/Reja";
+  "";
 
 // MongoDB ulanish
 mongodb.connect(
