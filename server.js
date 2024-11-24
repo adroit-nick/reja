@@ -1,9 +1,11 @@
 const http = require("http");
 const mongodb = require("mongodb");
 
-// MongoDB ulanish satri
+// MongoDB ulash
+let db;
+
 const connectionString =
-  "";
+  "mongodb+srv://AbrorT:abrormongodb94@cluster0.ct5ep.mongodb.net/";
 
 // MongoDB ulanish
 mongodb.connect(
@@ -11,15 +13,13 @@ mongodb.connect(
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
-  },
-  (err, client) => {
-    if (err) {
-      console.log("Error on Connection");
+  }, (err, client) => {
+    if (err) { console.log("Error on Connection MongoDB");
     } else {
-      console.log("MongoDB connection succeeded");
+      console.log("MongoDB connection succeed");
       module.exports = client;
 
-      // `app` ni oling va serverni ishga tushiring
+
       const app = require("./app");
       const server = http.createServer(app);
       let PORT = 3000;
