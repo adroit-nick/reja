@@ -14,6 +14,8 @@ function itemTemplate(item) {
 let createField = document.getElementById("create-field");
 
 
+//----- Add new item -----//
+
 document.getElementById("create-form").addEventListener("submit", function(e){
   e.preventDefault();
 
@@ -28,6 +30,9 @@ document.getElementById("create-form").addEventListener("submit", function(e){
     console.log("Iltimos qaytadan harakat qiling");
   });
 });
+
+
+//----- Delete and Edit (update) item -----//
 
 document.addEventListener("click", function(e){
 //delete oper
