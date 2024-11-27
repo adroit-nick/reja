@@ -10,7 +10,7 @@
    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
    crossorigin="anonymous">
 </head>
-<body style="background-color: rgb(221, 221, 221)">
+<body style="background-color: rgb(204, 204, 204)">
   <div class="container">
     <h1 class="display-4 text-center py-1">REJA VA MAQSADLAR</h1>
     <div class="jumbotron p-3 shadow-sm">
@@ -24,15 +24,14 @@
           class="form-control mr-3"
           type="text"
           style="flex: 1">
-          <button class="btn btn-primary" style="border-radius: 20px;">
+          <button class="btn btn-primary" style="border-radius: 30px;">
             Yangi reja qo'shish
           </button>
         </div>
       </form>
     </div>
     
-    <!-- Ushbu qism EJS tomonidan render qilinadi -->
-
+  
     <ul id="item-list" class="list-group pb-5">
       <%items.map(function(item) { %>
         <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
@@ -47,7 +46,7 @@
       <% }) %>
     </ul>
 
-    <button id="clean-all" class="btn btn-primary" style="border-radius: 20px;">
+     <button id="clean-all" class="btn btn-danger" style="border-radius: 10px;">
       Hamma rejalarni o'chirish
     </button>
   </div>
