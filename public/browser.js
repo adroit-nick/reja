@@ -30,23 +30,38 @@ document.getElementById("create-form").addEventListener("submit", function(e){
 });
 
 document.addEventListener("click", function(e){
-   // delate operation
+//delete oper
   console.log(e.target);
    if(e.target.classList.contains("delete-me")) {
-    if(confirm("Aniq ochirmoqchimisiz?")) {
-      axios.post("/delete-item",{id: e.target.getAttribute("data-id")})
+    if(confirm("Aniq o'chirmoqchimisiz?")) {
+      axios
+      .post("/delete-item",{id: e.target.getAttribute("data-id")})
       .then((response) =>{
         console.log(response.data);
         e.target.parentElement.parentElement.remove();
       })
       .catch((err) => {
-        console.log("Iltimos qaytadan urinib ko'ring");
+        console.log("Iltimos qaytadan harakat qiling");
       });
     }
   }
 
-//edit operation
- if(e.target.classList.contains("edit-me")) {
-   alert("siz edit tugmasini bosdingiz");
-  }
+//edit oper
+if(e.target.classList.contains("edit-me")) {
+    let userInput = prompt("O'zgartirish kiriting", 
+        e.target.parentElement.parentElement.querySelector(".item-text").innerHTML);
+    if (userInput) {
+        axios.post("/edit-item", {
+            id: e.target.getAttribute("data-id"), 
+            new_input: userInput,
+        }).then(response => {
+            console.log(response.data);
+            e.target.parentElement.parentElement.querySelector(
+                ".item-text"
+            ).innerHTML = userInput;
+        }).catch(err => {
+            console.log("Iltimos qayta urinib ko'ring!");
+        });
+    }
+}
 });
