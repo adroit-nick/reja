@@ -1,12 +1,12 @@
-console.log('Jack Ma o`gitlaridan');
-const list = [
-    "Yaxshi talaba bo'ling", // 0-20
-    "to`g`ri boshliq tanlang va ko`proq xato qiling", // 20-30
-    "o`zingiz uchun ishlashni boshlang", // 30-40
-    "siz kuchli bo`lgan narsalarni qiling", // 40-50
-    "Yoshlarga investitsiya qiling", // 50-60
-    "Endi dam oling, endi foydasi yo`q", //60~
-];
+// console.log('Jack Ma o`gitlaridan');
+// const list = [
+//     "Yaxshi talaba bo'ling", // 0-20
+//     "to`g`ri boshliq tanlang va ko`proq xato qiling", // 20-30
+//     "o`zingiz uchun ishlashni boshlang", // 30-40
+//     "siz kuchli bo`lgan narsalarni qiling", // 40-50
+//     "Yoshlarga investitsiya qiling", // 50-60
+//     "Endi dam oling, endi foydasi yo`q", //60~
+// ];
 
 //21-dars
         //CALL BACK FUNCTIONS
@@ -73,15 +73,15 @@ const list = [
     
         //CALL VIA then/catch
 
-        console.log('passed here  0');
-        maslahatBering(25)
-        .then(data => {
-          console.log("javob:", data)  ;
-        })
-        .catch((err) => {
-            console.log("ERROR:", err);
-        });
-        console.log("passed here 1");
+        // console.log('passed here  0');
+        // maslahatBering(25)
+        // .then(data => {
+        //   console.log("javob:", data)  ;
+        // })
+        // .catch((err) => {
+        //     console.log("ERROR:", err);
+        // });
+        // console.log("passed here 1");
 
 
         //asyn/await
@@ -94,3 +94,26 @@ const list = [
 //     console.log(javob);
 //    }
 // run();
+
+
+//--Task B --//
+
+async function countDigits(inputString) {
+    if (typeof inputString !== 'string') throw new Error("Input must be a string");
+
+    else {
+        let count = 0;
+        for (let num of inputString) {
+            if (num >= '0' && num <= '9') {
+                count++;
+            }
+        }
+        return count;
+    }
+};
+
+async function run() {
+    let result = await countDigits("ad2a54y79we38t0sfgb9");
+    console.log("Result:", result);
+}
+run();
