@@ -96,24 +96,75 @@
 // run();
 
 
+//--Task A --//
+
+
+// function countLetter(letter, word) {
+//     let count = 0;
+//     for (let char of word) {
+//         if (char === letter) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// // Masala uchun test
+// console.log(countLetter("e", "engineer")); // 3 ni qaytaradi
+// console.log(countLetter("n", "engineer")); // 2 ni qaytaradi
+// console.log(countLetter("x", "engineer")); // 0 ni qaytaradi
+
+
+
 //--Task B --//
 
-async function countDigits(inputString) {
-    if (typeof inputString !== 'string') throw new Error("Input must be a string");
+// async function countDigits(inputString) {
+//     if (typeof inputString !== 'string') throw new Error("Input must be a string");
 
-    else {
-        let count = 0;
-        for (let num of inputString) {
-            if (num >= '0' && num <= '9') {
-                count++;
-            }
-        }
-        return count;
-    }
-};
+//     else {
+//         let count = 0;
+//         for (let num of inputString) {
+//             if (num >= '0' && num <= '9') {
+//                 count++;
+//             }
+//         }
+//         return count;
+//     }
+// };
 
-async function run() {
-    let result = await countDigits("ad2a54y79we38t0sfgb9");
-    console.log("Result:", result);
+// async function run() {
+//     let result = await countDigits("ad2a54y79we38t0sfgb9");
+//     console.log("Result:", result);
+// }
+// run();
+
+
+//--Task D -- //
+
+// function checkContent(str1, str2) {
+//     if (str1.length !== str2.length) {
+//         return false; // Agar uzunliklar bir xil bo'lmasa, false qaytaradi
+//     }
+
+//     // Stringlarni tartiblab, taqqoslaymiz
+//     let sortedStr1 = str1.split('').sort().join('');
+//     let sortedStr2 = str2.split('').sort().join('');
+
+//     return sortedStr1 === sortedStr2;
+// }
+
+// console.log(checkContent("mitgroup", "gmtiprou")); // true qaytaradi
+// console.log(checkContent("hello", "world")); // false qaytaradi
+// console.log(checkContent("abc", "cba")); // true qaytaradi
+
+
+
+//-------------- E - TASK ----------------//
+
+function getReverse(a) {
+    const ans = a.split('').reverse().join('');
+    return(ans);
 }
-run();
+
+const result = getReverse("Hello");
+console.log(result);
